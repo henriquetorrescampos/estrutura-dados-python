@@ -56,8 +56,5 @@ print(f"""
       O percentual de respostas péssimas é {percentual_pessimo} 
       A maior idade que escolheu péssimo é {maior_idade_pessimo}
       A diferença entre as maiores idades ótimo e ruim é {diferenca_idade_maior_ruim}
-
 """
     )
-
-# (Current value - future value)/ current value * 100
