@@ -1,23 +1,32 @@
+primeira_maior_nota = 0
+segunda_maior_nota = 0
+primeira_matricula = 0
+segunda_matricula = 0
+primeira_materia = ''
+segunda_materia = ''
+
 for i in range(1, 101):
     matricula = int(input("Digite seu número de matrícula: "))
+    materia = input("Digite o nome da matéria: ")
     nota = float(input("Digite sua nota: "))
-    sexo = int(input("Digite 1 para masculino e 2 para feminino: "))
-    soma_alturas += altura
 
+    if nota > primeira_maior_nota:
+        segunda_maior_nota = primeira_maior_nota
+        segunda_matricula = primeira_matricula
+        segunda_materia = primeira_materia
 
-    if menor_altura < altura:
-        menor_altura = altura
-    elif altura > maior_altura:
-        maior_altura = altura
+        primeira_maior_nota = nota
+        primeira_matricula = matricula
+        primeira_materia = materia
+    
+    elif nota > segunda_maior_nota and nota != primeira_maior_nota:
+        segunda_maior_nota = nota
+        segunda_matricula = matricula
+        segunda_materia = materia
 
-    if sexo == 2:
-        altura_mulher += altura
-
-print(
-    f"""A maior altura da turma é ${maior_altura} 
-        A menor altura da turma é {menor_altura}
-        A média da altura das mulheres é {altura_mulher/50}
-        A média de altura da turma é {soma_alturas/50}
-    """
+    print(f"""
+          O aluno de matrícula {primeira_matricula} da matéria {primeira_materia} obteve a primeira maior nota {primeira_maior_nota}.
+          O aluno de matrícula {segunda_matricula} da matéria {segunda_materia} obteve a segunda maior nota {segunda_maior_nota}. 
+        """
     )
 
