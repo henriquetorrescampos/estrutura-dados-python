@@ -7,6 +7,7 @@ days = [random.randrange(121) for _ in range(121)]
 min_weather = min(weather)
 max_weather = max(weather)
 average_weather = st.mean(weather)
+# average_weather2 = max_weather / len(weather) second way
 
 weather_days = list(zip(days, weather))
 
